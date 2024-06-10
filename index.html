@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <title>AngularJS App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 col-12 mt-md-0 border-end pt-5">
+          <div class="px-5 d-none d-md-block">
+            <div class="logo">
+              <a href="" class="text-decoration-none text-dark logo">
+                <img srcset="./img/logo.png 2x" alt="" />
+                NFTlia
+              </a>
+            </div>
+            <div class="d-flex flex-column">
+              <button class="bg-3c50e0-hover text-start border-0">
+                <a class="text-decoration-none h6" ng-href="#/">Main</a>
+              </button>
+              <button class="bg-3c50e0-hover text-start border-0">
+                <a class="text-decoration-none h6" ng-href="#!signin"
+                  >Sign In</a
+                >
+              </button>
+              <button class="bg-3c50e0-hover text-start border-0">
+                <a class="text-decoration-none h6" ng-href="#!signup"
+                  >Sign Up</a
+                >
+              </button>
+            </div>
+          </div>
+          <!-- Mobile Navbar Toggle Content -->
+          <div class="d-md-none d-block fixed-top">
+            <div class="collapse" id="navbarToggleExternalContent">
+              <div class="bg-white p-4">
+                <ul class="list-group-mobi">
+                  <li class="list-group-item-mobi">
+                    <a class="nav-link" ng-href="#/">Main</a>
+                  </li>
+                  <li class="list-group-item-mobi">
+                    <a class="nav-link" ng-href="#!signin">Sign In</a>
+                  </li>
+                  <li class="list-group-item-mobi">
+                    <a class="nav-link" ng-href="#!signup">Sign Up</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <nav class="navbar navbar-light bg-white">
+              <div class="container-fluid">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarToggleExternalContent"
+                  aria-controls="navbarToggleExternalContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon text-dark"></span>
+                </button>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <div class="col-md-10 mt-2 mt-md-0 px-5 pt-5">
+          <div ng-include="'Topbar.html'"></div>
+          <div class="" ng-view></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "description": "Description of Product 1",
+      "price": 10.99,
+      "category": "Category 1"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "description": "Description of Product 2",
+      "price": 19.99,
+      "category": "Category 2"
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "description": "Description of Product 3",
+      "price": 29.99,
+      "category": "Category 1"
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "description": "Description of Product 4",
+      "price": 40.99,
+      "category": "Category 4"
+    },
+    {
+      "id": 5,
+      "name": "Product 5",
+      "description": "Description of Product 5",
+      "price": 19.99,
+      "category": "Category 5"
+    },
+    {
+      "id": 6,
+      "name": "Product 6",
+      "description": "Description of Product 6",
+      "price": 29.99,
+      "category": "Category 1"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "password": "password1",
+      "email": "user1@example.com"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "password2",
+      "email": "user2@example.com"
+    },
+    {
+      "id": 3,
+      "username": "user3",
+      "password": "password3",
+      "email": "user3@example.com"
+    }
+  ]
+}

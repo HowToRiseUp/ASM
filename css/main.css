@@ -1,0 +1,58 @@
+.bg-menu {
+}
+.list-group-mobi {
+  padding: 0;
+}
+.list-group-item-mobi {
+  list-style-type: none;
+}
+.list-group-item-mobi .nav-link {
+  color: black;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 12px;
+  width: 100%;
+}
+.list-group-item-mobi:hover .nav-link {
+  padding: 12px 28px;
+  border-radius: 12px;
+  background-color: #3c50e0;
+  width: 100%;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+.logo {
+  align-items: center;
+  display: flex;
+  font-size: 25px;
+  gap: 6px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.user {
+  width: 48px;
+  height: 48px;
+}
+.bg-3c50e0-hover {
+  color: black;
+  padding: 12px 28px;
+  background: white;
+  border-radius: 12px;
+}
+.bg-3c50e0-hover:hover {
+  color: #ffffff;
+  background-color: #3c50e0;
+}
+.bg-3c50e0-hover:hover a {
+  color: #ffffff;
+}
+.text-decoration-none {
+  color: black;
+}
+.tx-hever-white:hover {
+  color: #ffffff;
+}

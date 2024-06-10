@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-between align-items-center">
+  <!-- Topbar.html -->
+  <div class="position-relative w-50">
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="position-absolute ms-4 top-50 start-0 translate-middle"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M4.6829 17.6371C1.1057 14.0599 1.1057 8.2601 4.6829 4.6829C8.2601 1.1057 14.0599 1.1057 17.6371 4.6829C20.9069 7.95265 21.1879 13.0794 18.4802 16.6683L22.0943 20.2825C23.0371 21.2253 21.6229 22.6395 20.6801 21.6967L17.1092 18.1257C13.5103 21.2061 8.08905 21.0432 4.6829 17.6371ZM16.2229 6.09712C13.4267 3.30096 8.89327 3.30096 6.09712 6.09712C3.30096 8.89327 3.30096 13.4267 6.09712 16.2229C8.89327 19.019 13.4267 19.019 16.2229 16.2229C19.019 13.4267 19.019 8.89327 16.2229 6.09712Z"
+        fill="#808191"
+      />
+    </svg>
+    <input
+      type="text"
+      ng-model="searchKeyword"
+      placeholder="Search..."
+      ng-change="search(searchKeyword)"
+      class="form-control px-5"
+    />
+    <ul
+      class="position-absolute list-group"
+      style="width: 100%; z-index: 1000"
+      ng-if="searchKeyword"
+    >
+      <li
+        class="list-group-item"
+        ng-repeat="product in filteredProducts"
+        ng-click="goToProductDetail(product.id)"
+      >
+        {{product.name}}
+      </li>
+    </ul>
+  </div>
+
+  <div class="user">
+    <img
+      src="./img/logo_coin.jpg"
+      class="rounded-circle w-100 h-100 object-fit-cover border"
+      alt="..."
+    />
+  </div>
+</div>
