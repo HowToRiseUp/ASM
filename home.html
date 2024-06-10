@@ -1,52 +1,51 @@
 <!-- home.html -->
 <div ng-controller="HomeController">
-  <h1>{{ message }}</h1>
-  <!-- Search bar -->
-  <input
-    class="my-3"
-    type="text"
-    ng-model="searchKeyword"
-    placeholder="Search..."
-    ng-change="search(searchKeyword)"
-  />
-
-  <!-- Product list -->
-  <div class="d-none" ng-repeat="product in filteredProducts || products">
-    <h3>{{ product.name }}</h3>
-    <p>{{ product.description }}</p>
-    <p>Price: {{ product.price }}</p>
-    <button ng-click="goToProductDetail(product.id)">View Details</button>
-    <hr />
+  <!-- Search options -->
+  <div class="w-100 position-relative mb-5">
+    <input
+      class="form-control form-control-lg px-5 position-absolute top-50 start-50 w-50 -tr-x50"
+      type="text"
+      ng-model="searchKeyword"
+      placeholder="Search your product ..."
+      ng-change="search(searchKeyword)"
+    />
+    <img src="./img/Banner.png" class="img-fluid" alt="" />
   </div>
 
-  <!-- Sort options -->
-  <div ng-if="currentPage === 1">
-    <h1>Hello world</h1>
-  </div>
+  <div class="d-flex gap-3 justify-content-end align-items-center">
+    <label class="h6">Sort by:</label>
 
-  <div>
-    <label>Sort by:</label>
-    <select ng-model="sortType" ng-change="updatePagination()">
+    <select
+      ng-model="sortType"
+      class="form-select w-106px"
+      ng-change="updatePagination()"
+    >
       <option value="name">Name</option>
       <option value="price">Price</option>
-      <!-- Add more options for other sorting criteria if needed -->
     </select>
-    <button ng-click="reverseSort()">Toggle Order</button>
   </div>
 
   <!-- Product list -->
-  <div ng-repeat="product in paginatedProducts">
-    <h3>{{ product.name }}</h3>
-    <p>{{ product.description }}</p>
-    <p>Price: {{ product.price }}</p>
-    <button ng-click="goToProductDetail(product.id)">View Details</button>
-    <hr />
+  <div class="row">
+    <div class="col-3" ng-repeat="product in paginatedProducts">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p>Price: {{ product.price }}</p>
+      <button ng-click="goToProductDetail(product.id)">View Details</button>
+    </div>
   </div>
 
   <!-- Pagination controls -->
-  <ul class="pagination">
-    <li ng-repeat="page in pages" ng-class="{active: currentPage === page}">
-      <a href="" ng-click="setPage(page)">{{ page }}</a>
-    </li>
-  </ul>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center mt-3">
+      <li
+        class="page-item"
+        ng-repeat="page in pages"
+        ng-class="{active: currentPage === page}"
+      >
+        <a href="" class="page-link" ng-click="setPage(page)">{{ page }}</a>
+      </li>
+    </ul>
+  </nav>
 </div>

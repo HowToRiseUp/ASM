@@ -34,10 +34,10 @@ app.service('DataService', function ($http) {
 app.controller('HomeController', function ($scope, DataService, $location) {
     $scope.message = 'Welcome to the Home Page!';
     $scope.currentPage = 1;
-    $scope.itemsPerPage = 2;
+    $scope.itemsPerPage = 4;
     $scope.reverse = false;
     $scope.sortType = 'name';
-    $scope.searchKeyword = '1';
+    $scope.searchKeyword = '';
     $scope.filteredProducts = [];
 
     DataService.getProducts().then(function (products) {

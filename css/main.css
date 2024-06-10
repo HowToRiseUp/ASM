@@ -56,3 +56,9 @@
 .tx-hever-white:hover {
   color: #ffffff;
 }
+.-tr-x50 {
+  transform: translateX(-50%);
+}
+.w-106px {
+  width: 106px;
+}
