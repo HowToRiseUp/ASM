@@ -34,7 +34,7 @@ app.service('DataService', function ($http) {
 app.controller('HomeController', function ($scope, DataService, $location) {
     $scope.message = 'Welcome to the Home Page!';
     $scope.currentPage = 1;
-    $scope.itemsPerPage = 4;
+    $scope.itemsPerPage = 6;
     $scope.reverse = false;
     $scope.sortType = 'name';
     $scope.searchKeyword = '';
@@ -101,7 +101,13 @@ app.controller('SigninController', function ($scope) {
     $scope.message = 'Sign in to your account.';
 });
 
-app.controller('ProductDetailController', function ($scope, $routeParams) {
+app.controller('ProductDetailController', function ($scope, $routeParams, DataService) {
     $scope.productId = $routeParams.id;
     $scope.message = 'Details for product with ID: ' + $routeParams.id;
+
+    DataService.getProducts().then(function (products) {
+        $scope.product = products.find(product => product.id === parseInt($routeParams.id));
+    });
+
 });
+

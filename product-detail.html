@@ -1,2 +1,77 @@
-<h1>{{ message }}</h1>
-<p>Product ID: {{ productId }}</p>
+<div class="container-fluid mt-5" ng-if="product">
+  <div class="">
+    <div class="row g-0">
+      <div class="col-md-5">
+        <div class="img-product-detail">
+          <img srcset="{{ product.img }} 2x" alt="" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="px-5 d-flex flex-column h-442px">
+          <h2 class="mb-3">3D Renders #25</h2>
+          <p class="text-secondary mb-5">
+            The 3D Renders Collection is composed of interpretations of the
+            artist’s logo, celebrating his entrance into the NFT space. NFT
+            first-hand owners have the...
+          </p>
+          <div class="d-flex mb-5">
+            <div class="border-end border-2 pe-5">
+              <div class="mb-2"><strong>Creator</strong> 10% royalties</div>
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="wh-55 me-3">
+                  <img
+                    srcset="./img/Ellipse.png"
+                    alt=""
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="h6">The Reactang</div>
+              </div>
+            </div>
+            <div class="ps-5">
+              <div class="mb-2"><strong>Collection</strong></div>
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="wh-55 me-3">
+                  <img
+                    src="./img/Banner.png"
+                    alt=""
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="h6">Pixa Collections</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-secondary-1 rounded-2 d-inline-flex justify-content-between w-274"
+          >
+            <div class="p-3">
+              <div class="mb-2">Current Bid</div>
+              <div><strong class="h5">{{product.price}} ETH</strong></div>
+            </div>
+            <div class="p-3">
+              <div class="mb-2">Auction Time</div>
+              <div><strong class="h5">23h 34m 43s</strong></div>
+            </div>
+          </div>
+          <button
+            class="mt-auto btn btn-outline-primary py-3 text-primary-botton"
+            ng-click="goToProductDetail(product.id)"
+          >
+            Buy Now
+          </button>
+        </div>
+        <!-- <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">
+            <strong>Description:</strong> {{ product.description }}
+          </p>
+          <p class="card-text">
+            <strong>Price:</strong>
+            <span class="text-primary">{{ product.price | currency }}</span>
+          </p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

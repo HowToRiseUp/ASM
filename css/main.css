@@ -40,7 +40,7 @@
 .bg-3c50e0-hover {
   color: black;
   padding: 12px 28px;
-  background: white;
+  background: #f9f9f9;
   border-radius: 12px;
 }
 .bg-3c50e0-hover:hover {
@@ -61,4 +61,77 @@
 }
 .w-106px {
   width: 106px;
+}
+.eth {
+  width: 35px;
+  height: 35px;
+  border-radius: 100vh;
+  background-color: #ebedfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p-3px {
+  padding: 3px;
+}
+.text-eth {
+  font-size: 24px;
+  color: #4c4d53;
+  font-weight: 500;
+}
+.h-333px {
+  height: 433px;
+}
+.h-140px {
+  height: 190px;
+}
+.img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body {
+  background-color: #f9f9f9;
+}
+.bg-f9 {
+  background-color: #f9f9f9;
+}
+.btn-outline-primary {
+  color: #3c50e0;
+  border-color: #3c50e0;
+}
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #3c50e0;
+  border-color: #3c50e0;
+}
+.text-primary-botton {
+  color: #3c50e0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.text-primary-botton:hover {
+  color: #ffffff;
+}
+.wh-15 {
+  width: 25px;
+  height: 25px;
+}
+.wh-55 {
+  width: 45px;
+  height: 45px;
+}
+.img-product-detail {
+  height: 442px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.h-442px {
+  height: 442px;
+}
+.bg-secondary-1 {
+  background: #f2f2f2;
+}
+.w-274 {
+  max-width: 274px;
 }

@@ -1,6 +1,5 @@
 <!-- home.html -->
 <div ng-controller="HomeController">
-  <!-- Search options -->
   <div class="w-100 position-relative mb-5">
     <input
       class="form-control form-control-lg px-5 position-absolute top-50 start-50 w-50 -tr-x50"
@@ -11,7 +10,7 @@
     />
     <img src="./img/Banner.png" class="img-fluid" alt="" />
   </div>
-
+  <h3>Explore NFTs</h3>
   <div class="d-flex gap-3 justify-content-end align-items-center">
     <label class="h6">Sort by:</label>
 
@@ -26,12 +25,100 @@
   </div>
 
   <!-- Product list -->
-  <div class="row">
-    <div class="col-3" ng-repeat="product in paginatedProducts">
-      <h3>{{ product.name }}</h3>
-      <p>{{ product.description }}</p>
-      <p>Price: {{ product.price }}</p>
-      <button ng-click="goToProductDetail(product.id)">View Details</button>
+  <div class="row mt-4">
+    <div
+      class="col-12 col-md-6 col-lg-4"
+      ng-repeat="product in paginatedProducts"
+    >
+      <div class="bg-white p-3 d-flex flex-column h-333px p-3 m-2 rounded-3">
+        <div class="h-140px mb-2">
+          <img srcset="{{ product.img }}" class="img-fluid rounded-3" alt="" />
+        </div>
+        <div
+          class="review d-flex justify-content-between align-items-center mb-3"
+        >
+          <div class="position-relative">
+            <img srcset="./img/Ellipse.png 2x" alt="" />
+            <img
+              srcset="./img/Ellipse.png 2x"
+              class="position-absolute start-50"
+              alt=""
+            />
+          </div>
+          <div class="wh-15">
+            <img src="./img/heart.png" class="img-fluid" />
+          </div>
+        </div>
+        <h4 class="mb-3">{{ product.name }}</h4>
+        <div class="d-flex justify-content-start align-items-center gap-3">
+          <span class="eth"
+            ><svg
+              class="p-3px"
+              width="25"
+              height="24"
+              viewBox="0 0 15 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_613_16765)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.63159 13.6316L3.63159 7.73683L7.63159 10.2631L11.6316 7.73683L7.63159 13.6316Z"
+                  fill="#3C50E0"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.63159 13.6316V10.2631L11.6316 7.73683L7.63159 13.6316Z"
+                  fill="#3C50E0"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.63159 0.368385L11.6316 7.10523L7.63159 9.63154L3.63159 7.10523L7.63159 0.368385Z"
+                  fill="#3C50E0"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.63159 0.368385L11.6316 7.10523L7.63159 9.63154L7.63159 5.21049V0.368385Z"
+                  fill="#3C50E0"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.63159 0.368385L11.6316 7.10523L7.63159 5.21049V0.368385Z"
+                  fill="#3C50E0"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.6316 7.10526L7.63159 9.63157L3.63159 7.10526L7.63159 5.21052L11.6316 7.10526Z"
+                  fill="#3C50E0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_613_16765">
+                  <rect
+                    width="13.2632"
+                    height="13.2632"
+                    fill="white"
+                    transform="translate(0.868408 0.368385)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <div class="text-eth">{{ product.price }} ETH 1/1</div>
+        </div>
+        <button
+          class="mt-auto btn btn-outline-primary text-primary-botton"
+          ng-click="goToProductDetail(product.id)"
+        >
+          Buy Now
+        </button>
+      </div>
     </div>
   </div>
 

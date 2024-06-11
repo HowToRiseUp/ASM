@@ -2,62 +2,93 @@
   "products": [
     {
       "id": 1,
+      "img": "./img/Product1.png",
       "name": "Product 1",
       "description": "Description of Product 1",
-      "price": 100.99,
-      "category": "Category 1"
+      "price": 100.99
     },
     {
       "id": 2,
+      "img": "./img/Product1.png",
       "name": "Product 2",
       "description": "Description of Product 2",
-      "price": 19.99,
-      "category": "Category 2"
+      "price": 19.99
     },
     {
       "id": 3,
+      "img": "./img/Product1.png",
       "name": "Product 3",
       "description": "Description of Product 3",
-      "price": 29.99,
-      "category": "Category 1"
+      "price": 29.99
     },
     {
       "id": 4,
+      "img": "./img/Product1.png",
       "name": "Product 4",
       "description": "Description of Product 4",
-      "price": 40.99,
-      "category": "Category 4"
+      "price": 40.99
     },
     {
       "id": 5,
+      "img": "./img/Product1.png",
       "name": "Product 5",
       "description": "Description of Product 5",
-      "price": 19.99,
-      "category": "Category 5"
+      "price": 19.99
     },
     {
       "id": 6,
+      "img": "./img/Product1.png",
       "name": "Product 6",
       "description": "Description of Product 6",
-      "price": 29.99,
-      "category": "Category 1"
+      "price": 29.99
+    },
+    {
+      "id": 5,
+      "img": "./img/Product1.png",
+      "name": "Product 5",
+      "description": "Description of Product 5",
+      "price": 19.99
+    },
+    {
+      "id": 6,
+      "img": "./img/Product1.png",
+      "name": "Product 6",
+      "description": "Description of Product 6",
+      "price": 29.99
+    },
+    {
+      "id": 5,
+      "img": "./img/Product1.png",
+      "name": "Product 5",
+      "description": "Description of Product 5",
+      "price": 19.99
+    },
+    {
+      "id": 6,
+      "img": "./img/Product1.png",
+      "name": "Product 6",
+      "description": "Description of Product 6",
+      "price": 29.99
     }
   ],
   "users": [
     {
       "id": 1,
+      "img": "./img/Product1.png",
       "username": "user1",
       "password": "password1",
       "email": "user1@example.com"
     },
     {
       "id": 2,
+      "img": "./img/Product1.png",
       "username": "user2",
       "password": "password2",
       "email": "user2@example.com"
     },
     {
       "id": 3,
+      "img": "./img/Product1.png",
       "username": "user3",
       "password": "password3",
       "email": "user3@example.com"
